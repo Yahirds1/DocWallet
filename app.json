@@ -1,25 +1,53 @@
 {
   "expo": {
-    "name": "docwallet",
+    "name": "DocWallet",
     "slug": "docwallet",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.docwallet.app",
+      "supportsTablet": false
     },
     "android": {
+      "package": "com.docwallet.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#192331",
+        "foregroundImage": "./assets/adaptive-foreground.png",
+        "monochromeImage": "./assets/adaptive-monochrome.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-sharing",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "DocWallet usa Face ID para desbloquear los documentos que decidas proteger."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "DocWallet necesita acceso a la cámara para fotografiar tus documentos.",
+          "microphonePermission": false,
+          "photosPermission": "DocWallet necesita acceso a tus fotos para guardar imágenes de documentos."
+        }
+      ],
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F6F6F3",
+          "image": "./assets/splash.png",
+          "imageWidth": 210,
+          "resizeMode": "contain"
+        }
+      ]
+    ]
   }
 }

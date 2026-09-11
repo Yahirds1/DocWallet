@@ -1,5 +1,4 @@
 # DocWallet
-
 Aplicación móvil local para guardar imágenes y documentos PDF, con protección
 biométrica opcional por documento.
 
